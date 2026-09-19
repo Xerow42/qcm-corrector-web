@@ -1,0 +1,31 @@
+{
+  "name": "qcm-corrector-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web front-end of QCM Corrector: create MCQs, publish correction sessions and review AI-graded results.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "check:secrets": "node scripts/check-secrets.mjs"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "next": "^16.2.1",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "^16.2.1",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
