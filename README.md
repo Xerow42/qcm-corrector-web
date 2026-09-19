@@ -1,5 +1,7 @@
 # QCM Corrector — Web front-end
 
+**English** · [Français](README.fr.md)
+
 Web application of **QCM Corrector**, a platform that lets teachers create multiple-choice exams (QCM), publish correction sessions, and review the results produced by an AI-based grading pipeline (computer vision + machine learning + OCR on scanned answer sheets).
 
 This repository contains **the web front-end** (the part built by the author, [Khalil Lamrabet](https://www.linkedin.com/in/khalillam12)). It talks to a FastAPI backend over HTTP/JSON and never accesses the database directly.
