@@ -90,6 +90,17 @@ Ouvrir <http://localhost:3000>.
 
 Voir [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) (en anglais) pour le déploiement (serveur Node.js, Vercel) et la configuration de CORS côté backend.
 
+### Mode démo (sans backend)
+
+Le dépôt inclut une petite API de démonstration avec des **données fictives**, pour essayer l'interface (ou faire des captures d'écran) sans le vrai backend :
+
+```bash
+npm run mock-api   # terminal 1 : API de démo sur http://127.0.0.1:8000
+npm run dev        # terminal 2 : l'application web sur http://localhost:3000
+```
+
+Les données restent en mémoire : publier un QCM dans l'éditeur ajoute une session à la liste, et tout est réinitialisé à l'arrêt du serveur. C'est un outil de démonstration, pas un remplacement du vrai backend.
+
 ### Scripts
 
 | Commande | Description |
@@ -100,6 +111,7 @@ Voir [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) (en anglais) pour le déploiemen
 | `npm run lint` | Analyse le code avec ESLint |
 | `npm run typecheck` | Vérifie les types avec TypeScript |
 | `npm run check:secrets` | Recherche des données sensibles avant publication |
+| `npm run mock-api` | Démarre l'API de démo avec des données fictives (sans backend) |
 
 ## Configuration
 
@@ -162,7 +174,7 @@ app/ (routes)  →  features/ + components/  →  hooks/ + lib/  →  types/
 ├── docs/                          # DATABASE.md (MCD/MLD), DEPLOYMENT.md
 ├── database/                      # Scripts PostgreSQL (à ajouter)
 ├── public/                        # Fichiers statiques
-├── scripts/check-secrets.mjs      # Détecteur de données sensibles
+├── scripts/                       # check-secrets.mjs, mock-api.mjs (API de démo)
 ├── .env.example
 └── package.json
 ```

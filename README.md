@@ -94,6 +94,17 @@ Open <http://localhost:3000>.
 
 See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) to deploy it (Node.js server, Vercel) and to configure CORS on the backend.
 
+### Demo mode (no backend needed)
+
+The repository includes a small demo API with **fictitious data**, so you can try the interface (or take screenshots) without the real backend:
+
+```bash
+npm run mock-api   # terminal 1: demo API on http://127.0.0.1:8000
+npm run dev        # terminal 2: the web app on http://localhost:3000
+```
+
+The data lives in memory only: publishing an MCQ in the editor adds a session to the list, and everything resets when you stop the server. It is a demo tool, not a replacement for the real backend.
+
 ### Scripts
 
 | Command | Description |
@@ -104,6 +115,7 @@ See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) to deploy it (Node.js server, Ver
 | `npm run lint` | Lint the code with ESLint |
 | `npm run typecheck` | Type-check the project with TypeScript |
 | `npm run check:secrets` | Scan the project for sensitive data before publishing |
+| `npm run mock-api` | Start the demo API with fictitious data (no backend needed) |
 
 ## Configuration
 
@@ -166,7 +178,7 @@ app/ (routes)  →  features/ + components/  →  hooks/ + lib/  →  types/
 ├── docs/                          # DATABASE.md (MCD/MLD), DEPLOYMENT.md
 ├── database/                      # PostgreSQL scripts (add yours here)
 ├── public/                        # Static assets
-├── scripts/check-secrets.mjs      # Sensitive-data guard
+├── scripts/                       # check-secrets.mjs, mock-api.mjs (demo API)
 ├── .env.example
 └── package.json
 ```
