@@ -16,11 +16,11 @@ Ce dépôt contient **l'interface web** (la partie développée par l'auteur, [K
 
 ```mermaid
 flowchart LR
-    Web\["Application web<br/>(ce dépôt)"] -- "HTTP / JSON" --> API\["Backend FastAPI"]
-    iOS\["Application iOS de scan"] -- "HTTP / JSON" --> API
-    API --> AI\["Service IA<br/>(OpenCV, TensorFlow/Keras, EasyOCR)"]
-    API --> DB\[("PostgreSQL")]
-    API --> Mail\["SMTP<br/>(e-mails de résultats)"]
+    Web\\\\\\\["Application web<br/>(ce dépôt)"] -- "HTTP / JSON" --> API\\\\\\\["Backend FastAPI"]
+    iOS\\\\\\\["Application iOS de scan"] -- "HTTP / JSON" --> API
+    API --> AI\\\\\\\["Service IA<br/>(OpenCV, TensorFlow/Keras, EasyOCR)"]
+    API --> DB\\\\\\\[("PostgreSQL")]
+    API --> Mail\\\\\\\["SMTP<br/>(e-mails de résultats)"]
 ```
 
 Le backend, le service IA et l'application iOS **ne font pas partie** de ce dépôt.
@@ -114,9 +114,9 @@ Les données restent en mémoire : publier un QCM dans l'éditeur ajoute une ses
 
 |Variable|Valeur par défaut|Description|
 |-|-|-|
-|`NEXT\_PUBLIC\_API\_URL`|`http://127.0.0.1:8000`|URL de base de l'API backend|
-|`NEXT\_PUBLIC\_DEMO\_TEACHER\_EMAIL`|`teacher@example.com`|E-mail de l'enseignant prérempli dans le formulaire « Nouveau QCM » (doit exister dans votre backend)|
-|`NEXT\_PUBLIC\_DEMO\_TEACHER\_ID`|`1`|Identifiant de l'enseignant prérempli dans le formulaire « Nouveau QCM »|
+|`NEXT\\\\\\\_PUBLIC\\\\\\\_API\\\\\\\_URL`|`http://127.0.0.1:8000`|URL de base de l'API backend|
+|`NEXT\\\\\\\_PUBLIC\\\\\\\_DEMO\\\\\\\_TEACHER\\\\\\\_EMAIL`|`teacher@example.com`|E-mail de l'enseignant prérempli dans le formulaire « Nouveau QCM » (doit exister dans votre backend)|
+|`NEXT\\\\\\\_PUBLIC\\\\\\\_DEMO\\\\\\\_TEACHER\\\\\\\_ID`|`1`|Identifiant de l'enseignant prérempli dans le formulaire « Nouveau QCM »|
 
 ## API backend utilisée
 
@@ -178,9 +178,9 @@ app/ (routes)  →  features/ + components/  →  hooks/ + lib/  →  types/
 
 ## Sécurité
 
-* **Aucun secret dans le dépôt.** La configuration vient des variables d'environnement ; seul `.env.example` (valeurs factices) est suivi, et les fichiers `.env\*` sont ignorés par Git.
+* **Aucun secret dans le dépôt.** La configuration vient des variables d'environnement ; seul `.env.example` (valeurs factices) est suivi, et les fichiers `.env\\\\\\\*` sont ignorés par Git.
 * **Analyse avant chaque envoi.** `npm run check:secrets` échoue s'il détecte des mots de passe ou jetons écrits en dur, des clés privées, des identifiants dans des URL, des adresses e-mail réelles, des adresses IP privées, ou des fichiers comme `.env`, des clés, des dumps de base de données et des archives. Il n'affiche jamais le secret lui-même. Sur GitHub, activez aussi *Secret scanning* et *Push protection* (Settings → Code security).
-* **Les variables `NEXT\_PUBLIC\_\*` sont publiques.** Elles sont intégrées au code envoyé au navigateur. N'y placez jamais de secret.
+* **Les variables `NEXT\\\\\\\_PUBLIC\\\\\\\_\\\\\\\*` sont publiques.** Elles sont intégrées au code envoyé au navigateur. N'y placez jamais de secret.
 * **Les détails d'erreur du serveur ne sont pas affichés.** Le client API affiche un court message (champ `detail` de FastAPI ou code de statut) au lieu du contenu brut de la réponse.
 * **Paramètres renforcés.** L'application définit les en-têtes `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy` et `Permissions-Policy`, supprime `X-Powered-By` et demande aux moteurs de recherche de ne pas l'indexer.
 * **Les brouillons restent dans le navigateur.** Le QCM en cours, bonnes réponses comprises, est stocké non chiffré dans le `localStorage` de l'enseignant. Utilisez *Annuler* pour l'effacer sur un ordinateur partagé.
