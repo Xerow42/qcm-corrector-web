@@ -193,9 +193,20 @@ app/ (routes)  →  features/ + components/  →  hooks/ + lib/  →  types/
 If a secret is ever committed by mistake, revoke and rotate it immediately: deleting it in a later commit does not remove it from the Git history.
 
 ## Known limitations
-
+ 
 * The login screens are **UI only**: no credentials are checked in this repository, and the "Enter" buttons are plain links.
 * The *Subject PDF* page is a placeholder; printing relies on the browser (`Ctrl+P`).
 * The interface is in French, without accented characters.
 * There are no automated tests yet.
 
+---
+
+## Author
+
+**Khalil Lamrabet**
+
+Engineering Student — Big Data & Artificial Intelligence
+
+- GitHub: [@Xerow42](https://github.com/Xerow42)
+- LinkedIn: [khalillam12](https://www.linkedin.com/in/khalillam12/)
+- Email: [klamrabeta19@gmail.com](mailto:klamrabeta19@gmail.com)
