@@ -1,0 +1,8 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+easyocr>=1.7
+tensorflow>=2.10
+opencv-python>=4.8
+numpy==1.26
+Pillow>=10.0
