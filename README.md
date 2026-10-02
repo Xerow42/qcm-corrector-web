@@ -1,4 +1,7 @@
 # QCM Corrector
+## Dashboard
+
+![Dashboard](docs/screenshots/dashboard.png)
 
 **English** · [Français](README.fr.md)
 
