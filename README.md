@@ -77,11 +77,13 @@ memory, which means it needs a small VM or a host like Render, Railway, Fly.io o
 ## Features
 
 - **Dashboard** — number of sessions, graded copies and copies needing manual review, plus the latest sessions.
-- **MCQ editor** — up to 60 questions with 4 choices (A–D), per-question weighting, single or multiple correct answers, live completeness check, autosave in the browser (`localStorage`), *save draft* and *publish* synchronised with the backend.
-- **MCQ list** — filter by status (all / published / draft / archived); resume the local draft.
+- **QCM editor** — up to 60 questions with 4 choices (A–D), per-question weighting, single or multiple correct answers, live completeness check, autosave in the browser (`localStorage`), *save draft* and *publish* synchronised with the backend.
+- **QCM list** — filter by status (all / published / draft / archived); resume the local draft.
 - **Sessions & results** — per-session summary (copies, average score, manual checks, e-mail status) and per-student detail: weighted score, correct questions, detected answers, and a *valid / to check* status.
 - **Admin view** — classes and their students, including the student identifiers to write on the answer sheets.
+## QCM CREATION
 
+![CREATE QCM](docs/screenshots/qcm-editor.png)
 ## Tech stack
 
 | Area | Technology |
