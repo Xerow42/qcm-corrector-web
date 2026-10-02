@@ -38,3 +38,8 @@ ai-service/**/__pycache__/
 ai-service/*.pyc
 ai-service/.venv/
 ai-service/venv/
+
+# backend generated/test image patches
+backend/data/patches/checked/
+
+backend/data/answer_key.json
