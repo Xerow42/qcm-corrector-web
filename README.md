@@ -86,6 +86,10 @@ memory, which means it needs a small VM or a host like Render, Railway, Fly.io o
 ![CREATE QCM](docs/screenshots/qcm-editor.png)
 ## Tech stack
 
+## QCM RESULTS
+
+![RESULTS](docs/screenshots/session-results.png)
+
 | Area | Technology |
 | --- | --- |
 | Framework | Next.js 16 (App Router), React 19 |
